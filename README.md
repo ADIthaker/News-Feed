@@ -1,12 +1,12 @@
 ## Prometheus - Grafana Dashboards
 <p float="left">
-  <img src="images/Prometheus.png" width="100" />
+  <img src="images/Prometheus.png" width="500" />
 
 </p>
 <p float="left">
-  <img src="images/grafana1.png" width="300" /> 
-  <img src="images/grafana2.png" width="300" /> 
-  <img src="images/grafana3.png" width="300" />
+  <img src="images/grafana1.png" width="400" /> 
+  <img src="images/grafana2.png" width="400" /> 
+  <img src="images/grafana3.png" width="400" />
 </p>
 
 
