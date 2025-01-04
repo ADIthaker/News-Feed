@@ -1,4 +1,12 @@
-### Steps to Run the Project:
+## Prometheus - Grafana Dashboards
+<p float="left">
+  <img src="images/Prometheus.png" width="100" />
+  <img src="images/grafana1.png" width="100" /> 
+  <img src="images/grafana2.png" width="100" /> 
+  <img src="images/grafana3.png" width="100" />
+</p>
+
+## Steps to Run the Project:
 
 1. Create a GKE Cluster with atleast 4 nodes and `e2-highmem-4` machines
 2. Clone the project onto gcloud, and run
