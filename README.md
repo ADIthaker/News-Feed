@@ -1,5 +1,5 @@
 ## System Design
-  <img src="images/contentcuration.png" width="500" />
+  <img src="images/contentcuration.png" />
 
 ## Prometheus - Grafana Dashboards
 <p float="left">
