@@ -1,0 +1,45 @@
+version: '3.7'
+services:
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - prometheus
+
+  kafka-exporter:
+    image: danielqsj/kafka-exporter
+    container_name: kafka-exporter
+    ports:
+      - "9308:9308"
+    environment:
+      KAFKA_BROKERS: "kafka-broker:9092"
+
+  mongodb-exporter:
+    image: percona/mongodb_exporter
+    container_name: mongodb-exporter
+    ports:
+      - "9216:9216"
+    environment:
+      MONGODB_URI: "mongodb://mongo:27017"
+
+  redis-exporter:
+    image: oliver006/redis_exporter
+    container_name: redis-exporter
+    ports:
+      - "9121:9121"
+    environment:
+      REDIS_ADDR: "redis:6379"

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feed-gen
+  labels:
+    app: feed-gen
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: feed-gen
+  template:
+    metadata:
+      labels:
+        app: feed-gen
+    spec:
+      containers:
+      - name: feed-gen
+        image: adth3249/feed-gen:v12
+        env:
+        - name: MONGODB_URI
+          value: "mongodb+srv://root:root@cluster0.s95i6.mongodb.net/contentcuration?retryWrites=true&w=majority&appName=Cluster0"
+        - name: REDIS
+          value: "redis://redis:6379"

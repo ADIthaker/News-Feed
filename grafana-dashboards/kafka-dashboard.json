@@ -1,0 +1,28 @@
+{
+    "annotations": {
+      "list": []
+    },
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Kafka Consumer Lag",
+        "targets": [
+          {
+            "expr": "kafka_consumergroup_lag",
+            "format": "time_series"
+          }
+        ],
+        "xaxis": {
+          "mode": "time"
+        },
+        "yaxes": [
+          {
+            "format": "short"
+          }
+        ]
+      }
+    ],
+    "title": "Kafka Metrics Dashboard",
+    "version": 1
+  }
+  

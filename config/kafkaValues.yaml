@@ -1,0 +1,15 @@
+extraScrapeConfigs: | 
+  - job_name: kafka
+    scrape_interval: 45s
+    scrape_timeout:  30s
+    metrics_path: "/metrics"
+    static_configs:
+    - targets:
+      - kafka-exp-prometheus-kafka-exporter:9308
+  - job_name: redis
+    scrape_interval: 45s
+    scrape_timeout: 30s
+    metrics_path: "/metrics"
+    static_configs:
+    - targets:
+      - redis-exporter:9121

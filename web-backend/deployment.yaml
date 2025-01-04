@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rest-server
+  labels:
+    app: rest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rest
+  template:
+    metadata:
+      labels:
+        app: rest
+    spec:
+      containers:
+      - name: rest-server
+        image: adth3249/webrest:v16
+        env:
+        - name: REDIS
+          value: "redis://redis:6379"
+        - name: JWT_SECRET
+          value: "contentcuration1290248"
+        - name: MONGODB_URI
+          value: "mongodb+srv://root:root@cluster0.s95i6.mongodb.net/contentcuration?retryWrites=true&w=majority&appName=Cluster0"
+        - name: GOOGLE_API_KEY
+          value: "AIzaSyCTdz75noveDJuVEIA4QngtIA7UIG2Xh9E"
+        - name: OPENAI_KEY
+          value: "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"
+        - name: NEWS_KEY
+          value: "ac464f652385416ab4fd71845b435f27"
+        - name: REDDIT_CLIENT_ID
+          value: mlPfwvl3LkP-OsKnvHz1eg
+        - name: REDDIT_CLIENT_SECRET
+          value: 6rild8oG5A49fXzDsTQ150Rwpb0Zlg

@@ -1,0 +1,10 @@
+kafkaServer:
+  - "my-kafka.default.svc.cluster.local:9092"
+sasl:
+  enabled: true
+  handshake: true
+  scram:
+    enabled: true
+    mechanism: "scram-sha256"
+    username: "user1"
+    password: "MqvdMTxyt7"

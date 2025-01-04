@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fetcher
+  labels:
+    app: fetcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fetcher
+  template:
+    metadata:
+      labels:
+        app: fetcher
+    spec:
+      containers:
+      - name: fetcher
+        image: adth3249/fetcher:v33
+        imagePullPolicy: Always
+        env:
+        - name: GOOGLE_API_KEY
+          value: "AIzaSyCTdz75noveDJuVEIA4QngtIA7UIG2Xh9E"
+        - name: OPENAI_KEY
+          value: "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"
+        - name: NEWS_KEY
+          value: "ac464f652385416ab4fd71845b435f27"
+        - name: REDIS
+          value: "redis://redis:6379"
+        - name: REDDIT_CLIENT_ID
+          value: mlPfwvl3LkP-OsKnvHz1eg
+        - name: REDDIT_CLIENT_SECRET
+          value: 6rild8oG5A49fXzDsTQ150Rwpb0Zlg
+        - name: ASSEMBLY_AI
+          value: 7664f4f0b6f14d31b6099ed05c1cd20f
