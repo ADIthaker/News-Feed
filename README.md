@@ -1,7 +1,15 @@
 ## System Design
   <img src="images/contentcuration.png" width="500" />
 
-## Prometheus - Grafana Dashboards
+## Web UI
+<p float="left">
+  <img src="images/register.jpg" width="450" /> 
+  <img src="images/login.jpg" width="450" /> 
+  <img src="images/topics.jpg" width="450" />
+  <img src="images/feed.jpg" width="450" />
+</p>
+
+## Prometheus & Grafana Dashboards
 <p float="left">
   <img src="images/Prometheus.png" width="500" />
 
