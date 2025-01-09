@@ -3,10 +3,10 @@
 
 ## Web UI
 <p float="left">
-  <img src="images/register.jpg" width="450" /> 
-  <img src="images/login.jpg" width="450" /> 
-  <img src="images/topics.jpg" width="450" />
-  <img src="images/feed.jpg" width="450" />
+  <img src="images/register.jpg" width="550" /> 
+  <img src="images/login.jpg" width="550" /> 
+  <img src="images/topics.jpg" width="550" />
+  <img src="images/feed.jpg" width="550" />
 </p>
 
 ## Prometheus & Grafana Dashboards
